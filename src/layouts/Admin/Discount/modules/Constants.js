@@ -1,0 +1,10 @@
+export const loadingContants = "LOADING_DISCOUNT";
+export const fetchSuccessContants = "FETCH_DISCOUNT_SUCCESS";
+export const fetchFailContants = "FETCH_DISCOUNT_FAIL";
+export const paginationContants = "PAGINATION_DISCOUNT";
+export const createContants = "CREATE_DISCOUNT";
+export const editContants = "EDIT_DISCOUNT";
+export const updateContants = "UPDATE_DISCOUNT";
+export const deleteContants = "DELETE_DISCOUNT";
+export const seachContants = "SEACH_DISCOUNT";
+export const modalContants = "MODAL_DISCOUNT";

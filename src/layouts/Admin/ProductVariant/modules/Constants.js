@@ -1,0 +1,10 @@
+export const loadingContants = "LOADING_PRODUCT_SKU";
+export const fetchSuccessContants = "FETCH_PRODUCT_SKU_SUCCESS";
+export const fetchFailContants = "FETCH_PRODUCT_SKU_FAIL";
+export const paginationContants = "PAGINATION_PRODUCT_SKU";
+export const createContants = "CREATE_PRODUCT_SKU";
+export const editContants = "EDIT_PRODUCT_SKU";
+export const updateContants = "UPDATE_PRODUCT_SKU";
+export const deleteContants = "DELETE_PRODUCT_SKU";
+export const seachContants = "SEACH_PRODUCT_SKU";
+export const modalContants = "MODAL_PRODUCT_SKU";

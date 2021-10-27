@@ -1,0 +1,82 @@
+.header__mobile {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: $pd-2;
+    visibility: hidden;
+    opacity: 0;
+    transition: $tran-2;
+    z-index: $z-index-4;
+    .mobile__menu {
+        list-style: none;
+        padding: $pd-1 0;
+        background-color: $color-white;
+        max-height: 350px;
+        width: 100%;
+        overflow-y: scroll;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 7px;
+        z-index: $z-index-3;
+        .mobile__item {
+            padding: $pd-1 $pd-2 $pd-0 $pd-3;
+            cursor: pointer;
+            position: relative;
+            .mobile__navlink {
+                text-decoration: none;
+                transition: $tran-2;
+                display: block;
+                @include styleText($fs-0,$color-black-1,0,0,$fw-3);
+                i {
+                    float: right;
+                }
+            }
+            .navlink__active {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+            // .active {
+            //     color: $bg-blue;
+            // }
+            &:hover a {
+                color: $bg-blue;
+            }
+            .mobile__submenu {
+                display: none;
+                list-style: none;
+                padding: $pd-1 0 $pd-1 $pd-2;
+                li {
+                    padding: $pd-1 0;
+                    a {
+                        text-decoration: none;
+                        transition: $tran-2;
+                        @include styleText($fs-0,$color-black-1,0,0,$fw-3);
+                    }
+                    &:hover a {
+                        color: $bg-blue;
+                    }
+                }
+            }
+            .menu-active {
+                display: block;
+            }
+        }
+        @include responsive('large'){
+            width: 60%;
+        }
+        @include responsive('medium'){
+            width: 100%;
+        }
+    }
+    @include responsive('large'){
+        & {
+            display: block;
+        }
+    }
+}
+
+.toggle__menu {
+    opacity: 1;
+    visibility: visible;
+}

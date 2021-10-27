@@ -1,0 +1,17 @@
+.brand {
+    margin-top: $mg-2;
+    padding: 0 $pd-1;
+    .list__brand {
+        border: 1px solid #eee;
+        .brand__item {
+            padding: $pd-2;
+            text-align: center;
+            margin: 0;
+            border-right: 1px solid #eee;
+            img {
+                width: 100%;
+                height: 73px;
+            }
+        }
+    }
+}

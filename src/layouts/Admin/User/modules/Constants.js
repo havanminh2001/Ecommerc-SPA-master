@@ -1,0 +1,11 @@
+export const loadingContants = "LOADING_USER";
+export const fetchSuccessContants = "FETCH_USER_SUCCESS";
+export const fetchFailContants = "FETCH_USER_FAIL";
+export const paginationContants = "PAGINATION_USER";
+export const createContants = "CREATE_USER";
+export const editContants = "EDIT_USER";
+export const updateContants = "UPDATE_USER";
+export const deleteContants = "DELETE_USER";
+export const seachContants = "SEACH_USER";
+export const updateStatusContants = "UPDATE_STATUS_USER";
+export const modalContants = "MODAL_USER";

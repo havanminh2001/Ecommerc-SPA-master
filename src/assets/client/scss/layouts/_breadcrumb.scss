@@ -1,0 +1,36 @@
+.breadcrumb {
+    padding: $pd-2 + 10;
+    margin:$mg-1 0;
+    .breadcrumb__list {
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+        .breadcrumb__item {
+            display: inline;
+            margin-right: $mg-1 + 10;
+            .breadcrumb__navlink {
+                position: relative;
+                text-decoration: none;
+                @include styleText($fs-0 - 1,$color-gray-1,0,0,$fw-2);
+                transition: $tran-2;
+                i {
+                    padding-right: 3px;
+                }
+                &::before {
+                    content: "\ea62";
+                    font-family: lineIcons;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 5%;
+                    right: -30%;
+                }
+                &:hover {
+                    color: $bg-blue;
+                }
+            }
+        }
+        @include responsive('small'){
+            padding: 0 $pd-1;
+        }
+    }
+}

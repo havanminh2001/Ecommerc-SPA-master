@@ -1,0 +1,28 @@
+.sale {
+    position: absolute;
+    top: -20%;
+    right: -25%;
+    width: 26px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        @include styleText($fs-default - 4,$bg-default,0,0,$fw-normal);
+        text-transform: uppercase;
+    }
+}
+
+.new {
+    background-color: $text-green;
+}
+.hot {
+    background-color: $bg-red;
+}
+.short {
+    right: -40%;
+}
+
+.short-navlink {
+    right: -10%;
+}

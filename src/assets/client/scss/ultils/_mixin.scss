@@ -1,0 +1,42 @@
+@mixin responsive($screen) {
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        $value : map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }@else {
+        @error 'srceen is not exist';
+    }
+}
+
+@mixin styleText($fs,$color,$mg-x,$mg-y,$fw) {
+    font-size: $fs;
+    color: $color;
+    margin: $mg-y $mg-x;
+    font-weight: $fw;
+}
+
+@mixin shadow($color) {
+    box-shadow: $color;
+}
+
+@mixin customScroll($width,$bg) {
+    /* width */
+    ::-webkit-scrollbar {
+        width: $width;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $bg;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $bg;
+    }
+}

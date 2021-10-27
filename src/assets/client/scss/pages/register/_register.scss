@@ -1,0 +1,120 @@
+.register {
+    padding: $pd-4 0;
+    background-color: #f9f9f9;
+    .register__content {
+        .register__form {
+            display: flex;
+            flex-wrap: wrap;
+            width: 55%;
+            margin: 0 auto;
+            padding: $pd-2 + 10;
+            border: 1px solid #e6e6e6;
+            background-color: $color-white;
+            border-radius: 4px;
+            .register__title {
+                width: 100%;
+                padding: 0 $pd-1;
+                margin-bottom: $mg-0;
+                h2 {
+                    @include styleText($fs-1,$bg-dark-blue,0,0,$fw-4);
+                    margin-bottom: $mg-0;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+            .register__group {
+                width: calc(100% / 2);
+                padding: 0 $pd-1;
+                margin-bottom: $mg-1;
+                label {
+                    margin-bottom: 5px;
+                    span {
+                        color: $bg-red;
+                    }
+                }
+                .form-control {
+                    padding: $pd-1 $pd-2;
+                    &:focus {
+                        border: 1px solid $bg-blue;
+                        box-shadow: none;
+                    }
+                }
+                .form-select {
+                    padding: $pd-1 $pd-2;
+                    &:focus {
+                        border: 1px solid $bg-blue;
+                        box-shadow: none;
+                    }
+                }
+                .register__required {
+                    color: $bg-red;
+                }
+                .register__error {
+                    @include styleText($fs-default + 1,$bg-red,0,0,$fw-2);
+                }
+                @media screen and(max-width:499px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+            }
+            .register__btn {
+                padding: 0 $pd-1;
+                width: 100%;
+                button {
+                    width: 100%;
+                    padding: $pd-1 0;
+                    border: none;
+                    background-color: $bg-blue;
+                    color: $color-white;
+                    border-radius: 4px;
+                    transition: $tran-2;
+                    @include styleText(14px,$color-white,0,0,$fw-2);
+                    &:hover {
+                        background-color: $bg-dark-blue;
+                    }
+                }
+            }
+            .register__outer {
+                margin-top: $mg-1;
+                text-align: center;
+                width: 100%;
+                p {
+                    color: $bg-dark-blue;
+                    a {
+                        text-decoration: none;
+                        transition: $tran-1;
+                        color: $bg-blue;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            @include responsive('extra-large'){
+                & {
+                    width: 70%;
+                }
+            }
+            @include responsive('medium'){
+                & {
+                    width: 100%;
+                }
+            }
+        }
+        @include responsive('small'){
+            & {
+                padding: 0 $pd-1;
+            }
+        }
+    }
+    
+}
+
+@include responsive('small'){
+    .register {
+        padding: 0px;
+    }
+}

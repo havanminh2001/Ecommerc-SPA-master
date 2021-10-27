@@ -1,0 +1,30 @@
+.shipping {
+    margin-top: $mg-2;
+    .shipping__list {
+        padding: 0 $pd-1;
+        .shipping__item {
+            border: 1px solid #eee;
+            padding: 30px $pd-3;
+            text-align: center;
+            .shipping__icon {
+                margin-bottom: $mg-0;
+                i {
+                    @include styleText(38px,$bg-blue,0,0,$fw-2);
+                }
+            }
+            .shipping__text {
+                h5 {
+                    @include styleText($fs-0,$bg-dark-blue,0,0,$fw-4);
+                }
+                p {
+                    @include styleText($fs-0 - 2,$color-gray-1,0,0,$fw-2);
+                }
+            }
+        }
+    }
+    @include responsive('small'){
+        & {
+            padding: 0 $pd-1;
+        }
+    }
+}

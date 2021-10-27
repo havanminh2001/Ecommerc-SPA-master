@@ -1,0 +1,54 @@
+.relation {
+    padding: 0 $pd-1;
+}
+
+.relation__title {
+    h4 {
+        border-bottom: 1px solid #e5e5e5;
+        color: #232323;
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        &::before {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 90px;
+            height: 1px;
+            background-color: #0167f3;
+            content: '';
+        }
+    }
+}
+
+.relation__list {
+    .relation__item {
+        display: flex;
+        margin-bottom: $mg-1;
+        figure {
+            margin-bottom: 0;
+            width: 20%;
+            flex-shrink: 0;
+            padding-right: $pd-1;
+            img {
+                width: 100%;
+            }
+        }
+        .relation__text {
+            flex:1;
+            h3 {
+                a {
+                    @include styleText($fs-0 - 1,$bg-dark-blue,0,0,$fw-2);
+                    text-decoration: none;
+                    transition: $tran-1;
+                    &:hover {
+                        color: $bg-blue;
+                    }
+                }
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

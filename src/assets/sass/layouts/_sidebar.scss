@@ -1,0 +1,192 @@
+.sidebar {
+    width: 17%;
+    height: auto;
+    transition: $tran-2;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    flex-shrink: 0;
+    background-color: $light;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 16px;
+    padding: $pd-3 $pd-2;
+    @include responsive('extra-large') {
+        & {
+            width: 20%;
+        }
+    }
+    @include responsive('large') {
+        & {
+            width: 100px;
+        }
+    }
+    @include responsive('large') {
+        & {
+            width: 80px;
+        }
+    }
+}
+
+.sidebar__logo {
+    margin-bottom: $mg-2;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    padding: 0;
+    .sidebar__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: $pd-1 + 2 $pd-2;
+        cursor: pointer;
+        .sidebar__icon {
+            flex: 1;
+        }
+        .sidebar__title {
+            width: 80%;
+            flex-shrink: 0;
+            a {
+                @include styleText($fs-0,#000,0,0,$fw-2);
+                text-decoration: none;
+                .fa {
+                    float: right;
+                    font-size: 12px;
+                    padding-top: 8px;
+                }
+                .rotate {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .sidebar__item--content {
+            width: 100%;
+            display: flex;
+            padding: 12px 20px;
+            justify-content: center;
+        }
+    }
+    @include responsive('large') {
+        .sidebar__item {
+            position: relative;
+            .sidebar__icon {
+                & {
+                    width: 100%;
+                    flex: 0;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .sidebar__title {
+                display: none;
+            }
+            .sidebar__menu {
+                position: absolute;
+                top: 0;
+                right: -135px;
+                width: 120px;
+                z-index: 9;
+            }
+        }
+    }
+}
+
+
+
+.dropdown {
+    .sidebar__menu {
+        margin-top: $mg-0;
+        list-style: none;
+        padding: $pd-1 0;
+        margin-bottom: 0;
+        width: 100%;
+        border-radius: $bd-radius-0;
+        background-color: $light;
+        border: 1px solid rgba($gray,0.1);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 24px;
+        display: none;
+        transition: $tran-2;
+        .sidebar__navItem {
+            padding: $pd-1 $pd-3 - 10;
+            transition: $tran-2;
+            margin: 5px 0;
+            .sidebar__navlink {
+                text-decoration: none;
+                @include styleText($fs-0,#000,0,0,$fw-2);
+            }
+            &:hover {
+                background-color: rgba($gray,0.1);
+            }
+        }
+        .navItem__active {
+            background-color: rgba($gray,0.1);
+        }
+    }
+    .openMenu {
+        display: block;
+    }
+    
+}
+
+.active__item--res {
+    position: relative;
+    .menuResponsive {
+        position: absolute;
+        top: 0;
+        right: -135px;
+        width: 120px;
+    }
+}
+
+.minisize {
+    width: 80px;
+    transition: $tran-2;
+    .sidebar__list {
+        .sidebar__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            .sidebar__title {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+.sidebar__list {
+    .active__item {
+        background-color: $info;
+        border-radius: 12px;
+        color: $white;
+        .sidebar__title {
+            a {
+                color: $white;
+            }
+            
+        }
+    }
+}
+
+.sidebar__close {
+    flex: 1;
+    button {
+        border: none;
+        padding: 6px 16px;
+        border-radius: 50%;
+        background-color: $info;
+        .fa {
+            color: $white;
+            font-size: $fs-2;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// ultils
+@import './ultils/variable';
+@import './ultils/mixin';
+
+// base
+@import './base/reset';
+@import './base/customize';
+
+// component
+@import './components/button';
+
+// layouts
+@import './layouts/header';
+@import './layouts/menuMobile';
+@import './layouts/footer';
+@import './layouts/breadcrumb';
+
+// page
+// home
+@import './pages/home/banner';
+@import './pages/home/product';
+@import './pages/home/special';
+@import './pages/home/relation';
+@import './pages/home/brand';
+@import './pages/home/blog';
+@import './pages/home/shipping';
+// single product
+@import './pages/detail/product';
+// register
+@import './pages/register/register';
+// login
+@import './pages/login/login';
+// product
+@import './pages/product/product';
+// cart
+@import './pages/cart/cart';
+// checkout
+@import './pages/checkout/checkout';
+// purchase
+@import './pages/purchase/purchase';

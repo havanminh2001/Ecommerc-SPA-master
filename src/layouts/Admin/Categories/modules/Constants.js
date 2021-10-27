@@ -1,0 +1,10 @@
+export const loadingContants = "LOADING_CATEGORIES";
+export const fetchSuccessContants = "FETCH_CATEGORIES_SUCCESS";
+export const fetchFailContants = "FETCH_CATEGORIES_FAIL";
+export const paginationContants = "PAGINATION_CATEGORIES";
+export const createContants = "CREATE_CATEGORIES";
+export const editContants = "EDIT_CATEGORIES";
+export const updateContants = "UPDATE_CATEGORIES";
+export const deleteContants = "DELETE_CATEGORIES";
+export const seachContants = "SEACH_CATEGORIES";
+export const modalContants = "MODAL_CATEGORIES";

@@ -1,0 +1,94 @@
+.blog {
+    margin-top: $mg-2;
+    .blog__title {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+            padding: $pd-2 0;
+            line-height: 35px;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 20px;
+            @include styleText($fs-2 + 5,$bg-dark-blue,0,0,$fw-5);
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 15%;
+                height: 2px;
+                background-color: $bg-blue;
+            }
+        }
+        p {
+            @include styleText($fs-0 - 1,$color-gray-1,0,0,$fw-2);
+            margin: $mg-1 0 $mg-2 0;
+        }
+        @include responsive('large'){
+            width: 80%;
+        }
+        @media screen and(max-width:499px) {
+            h2 {
+                font-size: $fs-1;
+            }
+            p {
+                font-size: $fs-default;
+            }
+        }
+    }
+    @include responsive('small'){
+        & {
+            padding: 0 $pd-1;
+        }
+    }
+}
+
+.blog__content {
+    .blog__item{
+        padding: $pd-1;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 10px;
+        border: 1px solid #eee;
+        margin-bottom: $mg-1;
+        figure {
+            overflow: hidden;
+            img {
+                width: 100%;
+                transition: $tran-2;
+            }
+        }
+        .blog__text {
+            padding: 0 $pd-2;
+            margin-bottom: $mg-1;
+            h3 {
+                line-height: 1.2;
+                a {
+                    text-decoration: none;
+                    transition: $tran-1;
+                    @include styleText($fs-1 - 1,$bg-dark-blue,0,0,$fw-4);
+                    &:hover{
+                        color: $bg-blue;
+                    }
+                }
+            }
+            .blog__btn {
+                margin-top: $mg-1 + 10;
+                a {
+                    text-decoration: none;
+                    padding: $pd-1 + 2 $pd-2;
+                    border: 1px solid #eee;
+                    @include styleText(14px,$bg-dark-blue,0,0,$fw-3);
+                    transition: $tran-1;
+                    &:hover {
+                        background-color: $bg-blue;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+}

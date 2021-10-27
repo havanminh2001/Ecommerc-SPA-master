@@ -1,0 +1,76 @@
+// color
+$bg-blue: #0167F3;
+$bg-dark-blue: #081828;
+$bg-red: #f73232;
+$color-white: #fff;
+$color-black-0: #000;
+$color-black-1: #232323;
+$color-gray-0: #666;
+$color-gray-1: #888;
+$color-yellow-0: #fecb00;
+$color-orange-0: #F0722D;
+
+// transition
+$tran-1 : all 0.2s;
+$tran-2 : all 0.4s;
+$tran-3 : all 0.6s;
+$tran-4 : all 0.8s;
+
+// z-index
+$z-index-1 : 3;
+$z-index-2 : 5;
+$z-index-3 : 9;
+$z-index-4 : 99;
+$z-index-5 : 999;
+
+// font-size
+$fs-default : 12px;
+$fs-0 : 15px;
+$fs-1 : 20px;
+$fs-2 : 25px;
+$fs-3 : 50px;
+
+// margin
+$mg-0 : 10px;
+$mg-1 : 20px;
+$mg-2 : 40px;
+$mg-3 : 60px;
+
+
+// padding
+$pd-0 : 5px;
+$pd-1 : 10px;
+$pd-2 : 20px;
+$pd-3 : 40px;
+$pd-4 : 60px;
+
+
+// border-radius
+$bd-radius-0 : 6px;
+$bd-radius-1 : 12px;
+
+// line height
+$lh-0 : 1.2;
+$lh-1 : 1.4;
+$lh-2 : 1.6;
+$lh-3 : 2;
+
+// font-weight
+$fw-normal: normal;
+$fw-0: 300;
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 600;
+$fw-4: 700;
+$fw-5: 800;
+$fw-bold: bold;
+
+//break points
+$breakpoints:(
+    'extra-large': 1200px,
+    'large' : 992px,
+    'medium' : 768px,
+    'small' : 576px,
+    'mobile' : 499px,
+    'small-mobile': 360px
+)
